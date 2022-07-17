@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Screens/Home.dart';
+import 'package:flutter_application_1/utils/routes.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'Screens/login.dart';
 import "package:google_fonts/google_fonts.dart";
@@ -14,16 +15,19 @@ class myapp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: "/login",
-      routes: {"/": (context) => Home(), "/login": (context) => login()},
+      initialRoute: MyRoutes.Login,
+      routes: {
+        MyRoutes.Home: (context) => Home(),
+        MyRoutes.Login: (context) => login()
+      },
       themeMode: ThemeMode.light,
       darkTheme: ThemeData(brightness: Brightness.dark),
       theme: ThemeData(
           colorScheme: ColorScheme(
               brightness: Brightness.light,
-              primary: Colors.blue,
+              primary: Colors.indigoAccent,
               onPrimary: Colors.white,
-              secondary: Colors.cyan,
+              secondary: Colors.indigoAccent,
               onSecondary: Colors.white,
               error: Colors.black,
               onError: Colors.white,
