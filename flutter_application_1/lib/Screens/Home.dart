@@ -2,6 +2,8 @@ import 'dart:ui';
 
 import "package:flutter/material.dart";
 
+import '../widgets/drawer.dart';
+
 class Home extends StatelessWidget {
   final String t = "hello world";
   @override
@@ -13,7 +15,7 @@ class Home extends StatelessWidget {
       body: Center(
         child: Text(t),
       ),
-      drawer: Drawer(),
+      drawer: myDrawer(),
     );
   }
 }
