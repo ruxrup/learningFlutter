@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Screens/Home.dart';
 import 'package:flutter_application_1/utils/routes.dart';
+import 'package:flutter_application_1/widgets/themes.dart';
 import 'Screens/login.dart';
 
 void main() {
@@ -20,20 +21,7 @@ class myapp extends StatelessWidget {
         },
         debugShowCheckedModeBanner: false,
         themeMode: ThemeMode.light,
-        darkTheme: ThemeData(brightness: Brightness.dark),
-        theme: ThemeData(
-          colorScheme: ColorScheme(
-              brightness: Brightness.light,
-              primary: Colors.indigoAccent,
-              onPrimary: Colors.white,
-              secondary: Colors.indigoAccent,
-              onSecondary: Colors.white,
-              error: Colors.black,
-              onError: Colors.white,
-              background: Colors.grey,
-              onBackground: Colors.black,
-              surface: Colors.white,
-              onSurface: Colors.black),
-        ));
+        darkTheme: myThemes.darkTheme(context),
+        theme: myThemes.lightTheme(context));
   }
 }
