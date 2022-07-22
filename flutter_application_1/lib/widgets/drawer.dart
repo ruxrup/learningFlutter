@@ -5,8 +5,6 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_application_1/Screens/Home.dart';
 
 class myDrawer extends StatelessWidget {
-  const myDrawer({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Drawer(
