@@ -36,65 +36,45 @@ class _loginState extends State<login> {
             child: Column(
               children: [
                 SizedBox(
-                  height: 20,
+                  height: 100,
                 ),
                 Image.asset(
                   "assets/images/login_image.png",
                   fit: BoxFit.cover,
+                  cacheHeight: 300,
+                  cacheWidth: 300,
                 ),
                 SizedBox(
-                  height: 40,
+                  height: 200,
                 ),
                 Text(
-                  "Welcome $name!",
+                  "SINGLE APP, ALL SITES",
                   style: TextStyle(
-                    fontSize: 30,
-                    color: Colors.indigoAccent,
+                    fontSize: 25,
+                    color: Colors.black,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
                 SizedBox(
-                  height: 40,
+                  height: 15,
+                ),
+                Text(
+                  "AN APPLICATION FOR EVERY WEBSITE",
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.black,
+                  ),
                 ),
                 Padding(
                   padding:
                       const EdgeInsets.symmetric(vertical: 16, horizontal: 32),
                   child: Column(
                     children: [
-                      TextFormField(
-                        validator: (value) {
-                          if (value == null || value.isEmpty) {
-                            return ("Please Enter a Username!");
-                          } else {
-                            return null;
-                          }
-                        },
-                        onChanged: (value) {
-                          name = value;
-                          setState(() {});
-                        },
-                        decoration: InputDecoration(
-                            hintText: "Enter username", labelText: "Username"),
-                      ),
-                      TextFormField(
-                        validator: (value) {
-                          if (value == null || value.isEmpty) {
-                            return ("Please Enter a Password!");
-                          } else if (value.length < 6) {
-                            return ("Password cannot be less than 6 characters!");
-                          } else {
-                            return null;
-                          }
-                        },
-                        obscureText: true,
-                        decoration: InputDecoration(
-                            hintText: "Enter username", labelText: "Username"),
-                      ),
                       SizedBox(
                         height: 40,
                       ),
                       Material(
-                        color: Colors.indigoAccent,
+                        color: Colors.black,
                         borderRadius:
                             BorderRadius.circular(pressbutton ? 30 : 10),
                         child: InkWell(
@@ -108,9 +88,12 @@ class _loginState extends State<login> {
                             width: pressbutton ? 50 : 120,
                             child: Center(
                                 child: pressbutton
-                                    ? Icon(Icons.done)
+                                    ? Icon(
+                                        Icons.done,
+                                        color: Colors.white,
+                                      )
                                     : Text(
-                                        "Login",
+                                        "Let's Go!",
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold,
                                             fontSize: 20,

@@ -17,7 +17,7 @@ class _myappState extends State<myapp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        initialRoute: MyRoutes.Home,
+        initialRoute: MyRoutes.Login,
         routes: {
           MyRoutes.Home: (context) => Home(),
           MyRoutes.Login: (context) => login()
