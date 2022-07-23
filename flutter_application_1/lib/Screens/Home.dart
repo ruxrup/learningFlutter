@@ -13,8 +13,6 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  final String t = "hello world";
-
   @override
   void initState() {
     // TODO: implement initState
@@ -36,13 +34,21 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(t),
+        title: Text("Websites"),
+        elevation: 0.0,
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.black,
+        centerTitle: true,
       ),
-      body: ListView.builder(
-          itemCount: socials_list.length,
-          itemBuilder: ((context, index) {
-            return socialWidgets(social: socials_list[index]);
-          })),
+      body: (socials_list.isNotEmpty && socials_list != null)
+          ? ListView.builder(
+              itemCount: socials_list.length,
+              itemBuilder: ((context, index) {
+                return socialWidgets(social: socials_list[index]);
+              }))
+          : Center(
+              child: CircularProgressIndicator(),
+            ),
       drawer: myDrawer(),
     );
   }
