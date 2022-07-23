@@ -67,10 +67,5 @@ class myDrawer extends StatelessWidget {
 void fun(String site) => _launchURL(site);
 
 Future _launchURL(String website) async {
-  String url = website;
-  if (await canLaunch(url)) {
-    await launch(url);
-  } else {
-    throw 'Could not launch $url';
-  }
+  await launch(website);
 }
